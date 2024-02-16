@@ -1,0 +1,247 @@
+* {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.05em;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  background-color: #252525;
+}
+header {
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: #e82c2c;
+  color: #fff;
+  font-size: 24px;
+  padding: 40px 0;
+  border-radius: 128px 128px 0 0;
+}
+
+main {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: #fff;
+}
+h1 {
+  margin: 0;
+}
+.human img {
+  width: 150px;
+}
+.human span {
+  display: inline-block;
+  font-size: 28px;
+  color: #e82c2c;
+}
+
+p {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+/* ↓ スライドの外枠 */
+.slide-wrapper {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden; /* はみ出したスライドを隠す */
+}
+/* ↓ 左右のボタン */
+.next {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 10px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #333;
+  border-right: solid 3px #333;
+  -webkit-transform: rotate(45deg) translateY(50%);
+  transform: rotate(45deg) translateY(50%);
+}
+.prev {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 25px;
+  bottom: 50%;
+  z-index: 10;
+  cursor: pointer;
+  border-top: solid 3px #333;
+  border-right: solid 3px #333;
+  -webkit-transform: rotate(-135deg) translateY(-50%);
+  transform: rotate(-135deg) translateY(-50%);
+}
+/* ↓ インジケーター */
+.indicator {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  column-gap: 18px;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+.indicator li {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  list-style: none;
+  background-color: #fff;
+  border: 2px #000 solid;
+  cursor: pointer;
+}
+.indicator li:first-of-type {
+  background-color: #000;
+}
+.slide {
+  /*スライド全体 */
+  width: 300%;
+  height: 100%;
+  display: flex;
+  transition: all 0.3s;
+}
+.slide div {
+  /* スライドの中身 */
+  width: 33.33%;
+  height: 100%;
+  font-size: 16px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.slide1 {
+  /* スライドさせるために必要なクラス */
+  transform: translateX(0);
+}
+.slide2 {
+  /* スライドさせるために必要なクラス */
+  transform: translateX(-33.33%);
+}
+.slide3 {
+  /* スライドさせるために必要なクラス */
+  transform: translateX(-66.66%);
+}
+.slide div:nth-of-type(1) {
+  /* 背景色 */
+  background-color: #e3f1e4;
+}
+.slide div:nth-of-type(2) {
+  /* 背景色 */
+  background-color: #fce8f0;
+}
+.slide div:nth-of-type(3) {
+  /* 背景色 */
+  background-color: #e1f3fc;
+}
+
+.choice_message {
+  margin: 30px 0 10px 0;
+}
+ul {
+  padding: 0;
+  display: flex; /* 定義 */
+  justify-content: space-around;
+  /* table-layout: fixed; */
+  width: 100%;
+}
+li {
+  list-style-type: none;
+  background-color: #fff;
+  display: table-cell; /* 定義 */
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+}
+li:hover {
+  border: solid 2px #00c458;
+  border-radius: 4px;
+  color: #333;
+  transition: 0.1s;
+  box-sizing: border-box;
+}
+li img {
+  width: 100px;
+  height: 100px;
+}
+.battle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* align-content: flex-start; */
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.rival {
+  width: 50%;
+  margin: 30px auto 30px;
+  padding: 30px;
+  background-color: aliceblue;
+}
+#gu_btn,
+#cho_btn,
+#par_btn {
+  display: flex;
+  flex-flow: column;
+  /* width: 100px; */
+  justify-content: center;
+  align-items: center;
+}
+#gu_btn img,
+#cho_btn img,
+#par_btn img {
+  display: block;
+  width: 100px;
+}
+.rival img {
+  border-radius: 128px;
+}
+#judgment {
+  font-size: 40px;
+  margin: 0 0 10px 0;
+}
+.result_massage {
+  margin-top: 40px;
+}
+.result {
+  width: 70%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #252525;
+  border: double 8px #cecece;
+  border-radius: 8px;
+  color: #fff;
+}
+#pc_hands {
+  display: block;
+  margin-top: 20px;
+}
+
+footer {
+  max-width: 768px;
+  margin: 0 auto;
+  background-color: #cecece;
+  text-align: center;
+  padding: 40px 0;
+  border-radius: 0 0 128px 128px;
+}
+.reroad {
+  font-size: 18px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 128px;
+  color: #333;
+}
+small {
+  color: #fff;
+}
